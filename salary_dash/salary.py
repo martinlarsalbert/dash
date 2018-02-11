@@ -11,7 +11,7 @@ years = df['year'].unique()
 
 app.layout = html.Div([
 
-    html.H1(children='Akadmikerföreningens lönestatistik 2018'),
+    html.H1(children='Akademikerföreningens lönestatistik 2018'),
 
 
     dcc.Graph(
