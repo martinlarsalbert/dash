@@ -67,14 +67,14 @@ def update_figure(selected_year):
     line = go.Scatter(
         x=df_year['Examen'],
         y=df_year['salary'],
-        text=selected_year,
         mode='markers',
         opacity=0.7,
         marker={
             'size': 15,
             'line': {'width': 0.5, 'color': 'white'}
         },
-        name=selected_year)
+        name=selected_year,
+        text=df_year['Namn'])
     lines = [line]
 
     return {
@@ -82,9 +82,9 @@ def update_figure(selected_year):
         'layout': go.Layout(
             xaxis={'type': 'log', 'title': 'Examensår'},
             yaxis={'title': 'Lön'},
-            margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
+            margin={'l': 50, 'b': 30, 't': 10, 'r': 50},
             legend={'x': 0, 'y': 1},
-            hovermode='closest'
+            hovermode='closest',
         )
     }
 
